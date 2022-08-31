@@ -1,7 +1,7 @@
 import {Client, Intents, MessageActionRow, MessageFlags, MessageSelectMenu} from "discord.js";
 import cron from "node-cron";
-import dotenv from 'dotenv'
-// import config IDs
+import * as dotenv from 'dotenv'// import config IDs
+
 dotenv.config()
 const TOKEN = process.env.TOKEN
 import {
