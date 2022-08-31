@@ -1,6 +1,9 @@
 import {Client, Intents, MessageActionRow, MessageFlags, MessageSelectMenu} from "discord.js";
 import cron from "node-cron";
-
+const dotenv = require('dotenv')
+// import config IDs
+dotenv.config()
+const TOKEN = process.env.TOKEN
 import {
     authFailureMessage,
     basicEmbed,
@@ -1283,5 +1286,5 @@ const handleError = async (e, interaction) => {
 
 export const startBot = () => {
     console.log("Logging in...");
-    client.login(config.token);
+    client.login(TOKEN);
 }
